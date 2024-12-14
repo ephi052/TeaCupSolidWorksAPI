@@ -1,0 +1,40 @@
+# Visual Studio and .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+*.dll
+*.log
+*.vs/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Libraries
+libs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Logs
+*.log
+logs/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# Other
+*.sln
+*.sln.ide
+*.lock.json
+project.lock.json
