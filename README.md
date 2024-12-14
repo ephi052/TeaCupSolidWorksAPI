@@ -110,17 +110,17 @@ This project demonstrates a parametric model adjustment for a tea cup using the 
 ### **Input Window**
 The user interface for selecting files, folders, and target volume:
 
-![Input Window](images/input_popup.png)
+![Input Window](images/input_popup.PNG)
 
 ### **Parameters Table**
 The output window displaying calculations and adjusted parameters:
 
-![Parameters Table](images/output_popup.png)
+![Parameters Table](images/output_popup.PNG)
 
 ### **SolidWorks Model**
 An example of the adjusted tea cup model:
 
-![Tea Cup Model](images/res.png)
+![Tea Cup Model](images/res.PNG)
 
 ---
 
