@@ -133,56 +133,40 @@ The inner volume of the tea cup is calculated based on the geometric dimensions:
    The cup is modeled as a combination of a cylindrical body and curved base:
    
    - Cylindrical Volume: 
-     $$
-     V_{cylinder} = \pi \times (R_{inner}^2) \times H
-     $$
+     $$V_{cylinder} = \pi \times (R_{inner}^2) \times H$$
      Where:
-     - $$
-     R_{inner}
-     $$: Inner radius of the cup.
-     - $$H$$: Height of the cup.
+     - $$R_{inner}$$ : Inner radius of the cup.
+     - $$H$$ : Height of the cup.
 
    - Curved Base Adjustment:
      The volume of the curved base is approximated based on its geometry.
 
    The total volume is:
-   $$
-   V_{total} = V_{cylinder} - V_{base adjustment}
-   $$
+   $$V_{total} = V_{cylinder} - V_{base adjustment}$$
 
 2. **Aspect Ratio Maintenance**:
    To ensure the cup maintains its original shape, the aspect ratio ($$H / R_{inner}$$) is preserved during resizing.
 
 3. **New Dimensions Calculation**:
    - Given a target volume $$V_{target}$$:
-     - Calculate the new inner radius $$R_{inner,new}$$:
-       $$
-       R_{inner,new} = \sqrt{\frac{V_{target}}{\pi \times H}}
-       $$
+     - Calculate the new inner radius $$R_{inner,new}$$ :
+       $$R_{inner,new} = \sqrt{\frac{V_{target}}{\pi \times H}}$$
      - Adjust the height $$H_{new}$$ proportionally to maintain the aspect ratio:
-       $$
-       H_{new} = R_{inner,new} \times (H / R_{inner})
-       $$
+       $$H_{new} = R_{inner,new} \times (H / R_{inner})$$
 
 ### **Handle Adjustment Logic**
 The handle dimensions are adjusted based on the updated cup dimensions:
 
 1. **Handle Height**:
-   $$
-   H_{handle} = H_{new} \times 0.67
-   $$
+   $$H_{handle} = H_{new} \times 0.67$$
    Logic: The handle height is set to 67% of the new cup height.
 
 2. **Handle Offset**:
-   $$
-   Offset_{handle} = H_{handle} \times 0.40
-   $$
+   $$Offset_{handle} = H_{handle} \times 0.40$$
    Logic: The offset is 40% of the handle height.
 
 3. **Attachment Length**:
-   $$
-   L_{attach} = H_{handle} \times 0.60
-   $$
+   $$L_{attach} = H_{handle} \times 0.60$$
    Logic: The attachment length is 60% of the handle height.
 
 4. **Outer Arc Radius**:
