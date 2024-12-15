@@ -234,8 +234,13 @@ namespace CupAdjuster
                 AddRow("Current Handle Parameters", "", "");
                 AddRow("Outer Arc Radius (D1@Sketch3)", $"{handleOuterArc:F2} mm", "");
 
-                double currentInnerVolume = Math.PI * Math.Pow(innerRadius, 2) * cupHeight;
-                AddRow("Current Inner Volume", $"{currentInnerVolume / 1000:F2} ml", "");
+                // Base adjustment volume calculation
+                double capHeight = filletRadius / 2; // Approximation
+                double volumeBaseAdjustment = (Math.PI * Math.Pow(capHeight, 2) * (3 * innerRadius - capHeight)) / 6;
+
+                // Calculate inner volume including adjustment
+                double currentInnerVolume = (Math.PI * Math.Pow(innerRadius, 2) * cupHeight) - volumeBaseAdjustment;
+                AddRow("Current Inner Volume", $"{currentInnerVolume / 1000:F2} ml", "Adjusted for curved base.");
 
                 // Cup calculations
                 double aspectRatio = cupHeight / innerRadius;
