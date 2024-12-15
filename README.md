@@ -141,6 +141,10 @@ The inner volume of the tea cup is calculated based on the geometric dimensions:
    - Curved Base Adjustment:
      The volume of the curved base is approximated based on its geometry.
      $$V_{base adjustment} = \frac{\pi \times h^2 \times (3R - h)}{6}$$
+     
+     Where:
+     - $$3R$$ : Inner radius of the cup.
+     - $$h$$ : Height of the spherical cap, approximated as $$\frac{R_{\text{fillet}}}{2}$$.
 
    The total volume is:
    $$V_{total} = V_{cylinder} - V_{base adjustment}$$
